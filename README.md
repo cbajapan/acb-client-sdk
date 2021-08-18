@@ -16,3 +16,4 @@ We now offer simulator support with FCSDK-iOS. It is simple to set up. The Simul
 3. Make sure you select `copy items if needed` and select the `target` you wish to add the video to.
 
 That's it now when you make calls with the simulator, you will see the video from your real device and the mp4 will stream from the simulator. 
+ 
