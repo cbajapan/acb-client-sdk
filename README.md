@@ -1,10 +1,42 @@
 # ACBClientSDK
 
-## Swift Package Manager ##
+By default Bitcode is enabled in ACBClientSDK. If you want your app to have bitcode enabled all the other frameworks and libraries you depend on, also need to have bitcode enabled. 
+
+## License 
+
+ See - **Commercial** - License.txt
+
+## Installation
+
+### Swift Package Manager 
  
     1. In your Xcode Project, select File > Swift Packages > Add Package Dependency.
     2. Follow the prompts using the URL for this repository
     3. Choose which version you would like to checkout(i.e. 3.3.21)
+
+You will need to make sure that the binary is linked with the target you want to use the CocoaPod in.
+Navigate to Workspace -> Targets -> Build Phases -> Link Binaries With Libraries and add ACBClientSDK.
+
+### CocoaPods
+
+Check out [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/).
+
+To use ACBClientSDK in your project add the following 'Podfile' to your project
+
+    platform :ios, '10.0'
+    use_frameworks!
+
+    pod 'ACBClientSDK'
+
+Then run:
+
+    pod install
+ 
+You will need to make sure that the binary is linked with the target you want to use the CocoaPod in.
+Navigate to Workspace -> Targets -> Build Phases -> Link Binaries With Libraries and add ACBClientSDK.xcframwork.
+
+You will then need to add a WebRTC Library to resolve the symbols is the SDK. We recommend using CBARealTime Swift Package. 
+
 
 ### Simulator Support
 We now offer simulator support with FCSDK-iOS. It is simple to set up. The Simulator does not support the use of the camera, therefore we need to give it a video to stream to your real device.
@@ -17,3 +49,5 @@ We now offer simulator support with FCSDK-iOS. It is simple to set up. The Simul
 
 That's it now when you make calls with the simulator, you will see the video from your real device and the mp4 will stream from the simulator. 
  
+### Known issues
+* Sometimes when the CocoaPod is installed, it will try to Link Pod_YourApp.framework to the target. Simply remove Pod_YourApp.framework from the Link Binaries With Libraries section in the App's Target
