@@ -1,24 +1,16 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
     name: "ACBClientSDK",
+    platforms: [ .iOS(.v12) ],
     products: [
         .library(
             name: "ACBClientSDK",
-            type: .static,
-            targets: ["FCSDK-iOS"]),
-    ],
-    dependencies: [
+            targets: ["ACBClientSDK", "CBARealTime"]),
     ],
     targets: [
-        .target(
-            name: "FCSDK-iOS",
-            dependencies: ["ACBClientSDK", "CBARealTime"]),
-        .binaryTarget(name: "ACBClientSDK", url: "https://swift-sdk.s3.us-east-2.amazonaws.com/client_sdk/ACBClientSDK-3.4.0.xcframework.zip", checksum: "5addde9ebe33e7d6d40be35c18c04934c8f8333d3aa1a27633f6be131b019a95"),
-        .binaryTarget(name: "CBARealTime", url: "https://swift-sdk.s3.us-east-2.amazonaws.com/real_time/CBARealTime-m90-1.0.2.xcframework.zip", checksum: "4e492142aacf03676cea80b635ca40a1854b7bcda19027648c25b4e2ae249396")
+        .binaryTarget(name: "ACBClientSDK", url: "https://swift-sdk.s3.us-east-2.amazonaws.com/client_sdk/ACBClientSDK-3.4.3-20220106T140744.xcframework.zip", checksum: "67fff583a94891758425753cf198af922afc22196afe284b5a64f593ceddb080"),
+        .binaryTarget(name: "CBARealTime", url: "https://swift-sdk.s3.us-east-2.amazonaws.com/real_time/CBARealTime-m90-ios12-1.0.3.xcframework.zip", checksum: "e4943b29c8584ab5d0f4b3e38f4f3e914bd6b55f5dfe1066f27decc88d11387a")
     ]
 )
-
