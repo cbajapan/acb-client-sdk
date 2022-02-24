@@ -17,6 +17,16 @@ By default Bitcode is enabled in ACBClientSDK. If you want your app to have bitc
 You will need to make sure that the binary is linked with the target you want to use the CocoaPod in.
 Navigate to Workspace -> Targets -> Build Phases -> Link Binaries With Libraries and add ACBClientSDK.
 
+## Importing ACBClientSDK
+
+### Note
+
+Starting in FCSDK version 3.4.4, we’ve switched to a dynamic framework, the `import` mechanism needs to change. Please import the SDK accordingly.
+
+```Objective-C
+@import ACBClientSDK;
+``` 
+
 ### CocoaPods
 
 Check out [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/).
