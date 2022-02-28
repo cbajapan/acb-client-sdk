@@ -1,6 +1,20 @@
-# ACBClientSDK
+# Objective-C FCSDK iOS
 
-By default Bitcode is enabled in ACBClientSDK. If you want your app to have bitcode enabled all the other frameworks and libraries you depend on, also need to have bitcode enabled. 
+## System Minimum Requirements ##
+* Xcode 13
+* Monterey 12.1
+* swift-tools-version:5.3
+* iOS 13
+
+## Binaries
+| **Platform / arch** | arm64  | x86_x64 |
+|---------------------|--------|---------|
+| **iOS (device)**    |   ✅   |   N/A   |
+| **iOS (simulator)** |   ✅   |    ✅   |
+
+
+#### Please Follow this repository for the lateset SDK notifications.
+By default Bitcode is enabled in FCSDKiOS. If you want your app to have bitcode enabled all the other frameworks and libraries you depend on, also need to have bitcode enabled. 
 
 ## License 
 
@@ -17,11 +31,11 @@ By default Bitcode is enabled in ACBClientSDK. If you want your app to have bitc
 You will need to make sure that the binary is linked with the target you want to use the CocoaPod in.
 Navigate to Workspace -> Targets -> Build Phases -> Link Binaries With Libraries and add ACBClientSDK.
 
-## Importing ACBClientSDK
+## Importing FCSDKiOS
 
 ### Note
 
-Starting in FCSDK version 3.4.4, we’ve switched to a dynamic framework, the `import` mechanism needs to change. Please import the SDK accordingly.
+Starting in FCSDKiOS version 3.4.4, we’ve switched to a dynamic framework, the `import` mechanism needs to change. Please import the SDK accordingly.
 
 ```Objective-C
 @import ACBClientSDK;
@@ -31,7 +45,7 @@ Starting in FCSDK version 3.4.4, we’ve switched to a dynamic framework, the `i
 
 Check out [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/).
 
-To use ACBClientSDK in your project add the following 'Podfile' to your project
+To use FCSDKiOS in your project add the following 'Podfile' to your project
 
     platform :ios, '10.0'
     use_frameworks!
@@ -49,7 +63,7 @@ You will then need to add a WebRTC Library to resolve the symbols is the SDK. We
 
 
 ### Simulator Support
-We now offer simulator support with FCSDK-iOS. It is simple to set up. The Simulator does not support the use of the camera, therefore we need to give it a video to stream to your real device.
+We now offer simulator support with FCSDKiOS. It is simple to set up. The Simulator does not support the use of the camera, therefore we need to give it a video to stream to your real device.
 
 1. Create a short placeholder video about (5 seconds long) and name it `Simulator.mp4`.
 

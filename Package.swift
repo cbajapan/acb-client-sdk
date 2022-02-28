@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ACBClientSDK",
+    name: "objc-fcsdk-ios",
     platforms: [ .iOS(.v12) ],
     products: [
         .library(
